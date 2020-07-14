@@ -33,9 +33,13 @@ The site's content structure contains five main views.
 
 ### Skeleton
 
-
+#### Home page
 ![Desktop Demo](/assets/wireframes/1.png "Desktop Demo")
+
+#### App page - Desktop
 ![Desktop Demo](/assets/wireframes/2.png "Desktop Demo")
+
+#### App page - Mobile
 ![Desktop Demo](/assets/wireframes/2-mobile.png "Desktop Demo")
 
 
