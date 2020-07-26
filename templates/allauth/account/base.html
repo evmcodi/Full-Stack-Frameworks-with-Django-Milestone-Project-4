@@ -1,1 +1,14 @@
 {% extends "base.html" %}
+
+{% block content %}
+
+    <div class="defi-main-section">
+        <div class="defi-allauth-form">
+            <div class="allauth-form-inner-content">
+                {% block inner_content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

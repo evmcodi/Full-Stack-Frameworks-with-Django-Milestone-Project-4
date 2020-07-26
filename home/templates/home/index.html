@@ -4,5 +4,15 @@
 {% load static %}
 
 {% block content %}
-    <h1 class="display-4 text-success">Extending base template!</h1>
+{#    <h1 class="display-4 text-success">Extending base template!</h1>#}
+
+
+    <div class="hero-section">
+        <h1 class="hero-heading">Definitions App</h1>
+        <h5 class="hero-subhead">A place to store and view all the terms and definitions you learn.</h5>
+        <a id="hero-button" href="{% url 'account_signup' %}" class="button w-button">Sign Up!</a>
+        <small>Existing users sign in below:</small>
+        <a class="button defi-btn-secondary" href="{% url 'account_login' %}">Login</a>
+    </div>
+    </div>
 {% endblock %}

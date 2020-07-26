@@ -13,3 +13,129 @@ body {
 .nav-link {
   color: black !important;
 }
+
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  font-family: Poppins;
+
+}
+
+.hero-heading {
+  font-size: 52px;
+  font-weight: 800;
+  margin-top: 30px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.hero-subhead {
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 400;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+
+#hero-button {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 20px 30px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  border-radius: 3px;
+  background-color: #5e5cdd;
+  font-family: Poppins, sans-serif;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.button {
+  padding: 10px 20px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  border-radius: 3px;
+  background-color: #5e5cdd;
+  font-family: Poppins, sans-serif;
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+
+
+/* AllAuth forms styling */
+
+.defi-main-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.defi-allauth-form {
+
+}
+
+label {
+  display: block;
+}
+
+/* Keep checkbox on one line */
+label[for="id_remember"] {
+  display: inline-block;
+}
+
+form {
+  margin-bottom: 50px;
+}
+
+input {
+  width: 100%;
+}
+
+input[type="checkbox"] {
+  width: auto;
+}
+
+.defi-btn-secondary,.secondaryAction {
+  padding: 10px 20px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  border-radius: 1px;
+  background-color: #838383;
+  font-family: Poppins, sans-serif;
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: normal;
+  margin-right: 10px;
+  /*float: right;*/
+}
+
+.defi-btn-primary, .primaryAction {
+  padding: 10px 20px;
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  border-radius: 1px;
+  background-color: #5e5cdd;
+  font-family: Poppins, sans-serif;
+  color: #fff !important;
+  font-size: 16px;
+  font-weight: normal;
+  /*float: right;*/
+}
+
+
