@@ -83,7 +83,7 @@ body {
 }
 
 .defi-allauth-form {
-
+  max-width: 600px;
 }
 
 label {
