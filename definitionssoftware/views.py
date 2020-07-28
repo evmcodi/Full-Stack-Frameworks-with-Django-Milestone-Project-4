@@ -20,4 +20,4 @@ def view_definitionssoftware(request):
     if user.has_perm('definitionssoftware.access_paid_definitions_app'):
         return render(request, 'definitionssoftware/definitionssoftware.html')
 
-    return render(request, 'home/index.html')
+    return redirect(reverse('home'))
