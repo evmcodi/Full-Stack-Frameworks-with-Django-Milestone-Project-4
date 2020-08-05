@@ -54,7 +54,7 @@
 <nav class="navbar navbar-expand-lg navbar-light static-top"
      style="background-color: #dddddd; min-height: 65px; padding-bottom: 18px; padding-top: 18px">
     <div class="container">
-        <a class="navbar-brand" href="#">Definitions</a>
+        <a class="navbar-brand" href="{% url 'home' %}">Definitions</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -69,7 +69,10 @@
                         </li>
                     {% endif %}
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My Profile</a>
+                        <a class="nav-link" href="{% url 'payment' %}">Payment</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'view_definitionssoftware' %}">Definitions App</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
@@ -79,9 +82,6 @@
                         <a class="nav-link" href="{% url 'home' %}">Home
                             <span class="sr-only">(current)</span>
                         </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Features</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'view_definitionssoftware' %}">Definitions App</a>
