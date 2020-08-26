@@ -8,12 +8,11 @@
 
     {% if perms.definitionssoftware.access_paid_definitions_app %}
 
-        <div style="display: flex; max-width: 1280px; margin: auto;">
-            <div class="hero-section">
+        <div class="defi-toolbar">
 
-                <h1 class="page-header">My Terms</h1>
+            {#                <h1 class="page-header">My Terms</h1>#}
+            <button class="defi-btn-primary">New term</button>
 
-            </div>
         </div>
 
 
@@ -55,11 +54,11 @@
                     <hr>
 
                 {% empty %}
-                    <tr>
-                        <td colspan="8" class="text-center bg-warning">No book</td>
-                    </tr>
+                    <div></div>
                 {% endfor %}
 
+
+                <div style="height: 800px"></div>
 
             </div>
         </div>

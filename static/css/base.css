@@ -44,7 +44,7 @@ body {
 }
 
 
-#hero-button {
+.hero-button {
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 20px 30px;
@@ -195,3 +195,15 @@ hr {
     margin-left: 5px;
     max-height: 30px;
 }
+
+
+.defi-toolbar {
+    position: sticky;
+    top: 0;
+    background-color: darkgray;
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+

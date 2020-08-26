@@ -17,10 +17,11 @@ def view_definitionssoftware(request):
 
     user = request.user
 
-    terms = Term.objects.all()
+    # Retrieve only the current user's terms.
+    terms = Term.objects.filter(user=user)
 
     template = 'definitionssoftware/definitionssoftware.html'
-    
+
     context = {
         'terms': terms
     }
@@ -29,5 +30,3 @@ def view_definitionssoftware(request):
         return render(request, template, context)
 
     return redirect(reverse('payment'))
-
-
