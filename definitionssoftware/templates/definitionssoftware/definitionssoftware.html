@@ -4,16 +4,72 @@
 {% load static %}
 
 {% block content %}
-    {#    <h1 class="display-4 text-success">Extending base template!</h1>#}
-
-
-    <div class="hero-section">
-        testing
-    </div>
 
 
     {% if perms.definitionssoftware.access_paid_definitions_app %}
-        <h1>You have access to the definitions app.</h1>
+
+        <div style="display: flex; max-width: 1280px; margin: auto;">
+            <div class="hero-section">
+
+                <h1 class="page-header">My Terms</h1>
+
+            </div>
+        </div>
+
+
+        <div class="defi-software-section">
+
+
+            <div class="defi-software-app">
+
+
+                {% for term in terms %}
+
+                    <div class="term-defi-container">
+
+                        <div class="defi-term">
+                            <details>
+                                <summary>{{ term.term }}</summary>
+                                <p>{{ term.definition }}</p>
+                            </details>
+                        </div>
+
+
+                        <div class="term-defi-btn-container">
+                            <button type="button"
+                                    class="btn btn-outline-primary btn-sm js-update-term term-btn">
+                                <i class="fas fa-edit"></i>
+                                Edit
+                                {#                                data-url="{% url 'term_update' term.id %}">#}
+                            </button>
+                            <button type="button"
+                                    class="btn btn-outline-secondary btn-sm js-delete-term term-btn">
+                                {#                                data-url="{% url 'term_delete' term.id %}">#}
+                                <i class="fas fa-trash-alt"></i> Delete
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <hr>
+
+                {% empty %}
+                    <tr>
+                        <td colspan="8" class="text-center bg-warning">No book</td>
+                    </tr>
+                {% endfor %}
+
+
+            </div>
+        </div>
+
+
+
+
+
+
+
     {% endif %}
 
 {% endblock %}

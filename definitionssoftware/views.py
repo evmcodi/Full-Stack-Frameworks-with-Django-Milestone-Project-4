@@ -17,7 +17,17 @@ def view_definitionssoftware(request):
 
     user = request.user
 
-    if user.has_perm('definitionssoftware.access_paid_definitions_app'):
-        return render(request, 'definitionssoftware/definitionssoftware.html')
+    terms = Term.objects.all()
 
-    return redirect(reverse('home'))
+    template = 'definitionssoftware/definitionssoftware.html'
+    
+    context = {
+        'terms': terms
+    }
+
+    if user.has_perm('definitionssoftware.access_paid_definitions_app'):
+        return render(request, template, context)
+
+    return redirect(reverse('payment'))
+
+
