@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 class Term(models.Model):
     # The user that has created the term object.
-    user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
 
     # The term that the user enters.
     term = models.CharField(max_length=500, null=False, blank=False)
