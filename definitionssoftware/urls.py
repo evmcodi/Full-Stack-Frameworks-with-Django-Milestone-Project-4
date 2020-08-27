@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     path('', views.view_definitionssoftware, name='view_definitionssoftware'),
-    # path('add-term/', views.add_data, name='add_data'),
+    path('create/', views.term_create, name='term_create'),
+
 ]

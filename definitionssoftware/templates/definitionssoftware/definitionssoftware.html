@@ -8,10 +8,13 @@
 
     {% if perms.definitionssoftware.access_paid_definitions_app %}
 
+        <script src='{% static "definitionssoftware/js/definitionssoftware.js" %}'></script>
+
+
         <div class="defi-toolbar">
 
             {#                <h1 class="page-header">My Terms</h1>#}
-            <button class="defi-btn-primary">New term</button>
+            <button class="defi-btn-primary js-create-term" data-url="{% url 'term_create' %}">New term</button>
 
         </div>
 
@@ -22,40 +25,8 @@
             <div class="defi-software-app">
 
 
-                {% for term in terms %}
+                {% include 'definitionssoftware/includes/partial_term_list.html' %}
 
-                    <div class="term-defi-container">
-
-                        <div class="defi-term">
-                            <details>
-                                <summary>{{ term.term }}</summary>
-                                <p>{{ term.definition }}</p>
-                            </details>
-                        </div>
-
-
-                        <div class="term-defi-btn-container">
-                            <button type="button"
-                                    class="btn btn-outline-primary btn-sm js-update-term term-btn">
-                                <i class="fas fa-edit"></i>
-                                Edit
-                                {#                                data-url="{% url 'term_update' term.id %}">#}
-                            </button>
-                            <button type="button"
-                                    class="btn btn-outline-secondary btn-sm js-delete-term term-btn">
-                                {#                                data-url="{% url 'term_delete' term.id %}">#}
-                                <i class="fas fa-trash-alt"></i> Delete
-                            </button>
-
-                        </div>
-
-                    </div>
-
-                    <hr>
-
-                {% empty %}
-                    <div></div>
-                {% endfor %}
 
 
                 <div style="height: 800px"></div>
@@ -64,11 +35,22 @@
         </div>
 
 
+        <div class="modal fade" id="modal-term">
+            <div class="modal-dialog">
+                <div class="modal-content">
 
+                </div>
+            </div>
+        </div>
 
 
 
 
     {% endif %}
 
+
+{% endblock %}
+
+
+{% block postload_js %}
 {% endblock %}

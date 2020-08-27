@@ -1,0 +1,34 @@
+{% for term in terms %}
+
+    <div class="term-defi-container">
+
+        <div class="defi-term">
+            <details>
+                <summary>{{ term.term }}</summary>
+                <p>{{ term.definition }}</p>
+            </details>
+        </div>
+
+
+        <div class="term-defi-btn-container">
+            <button type="button"
+                    class="btn btn-outline-primary btn-sm js-update-term term-btn">
+                <i class="fas fa-edit"></i>
+                Edit
+                {#                                data-url="{% url 'term_update' term.id %}">#}
+            </button>
+            <button type="button"
+                    class="btn btn-outline-secondary btn-sm js-delete-term term-btn">
+                {#                                data-url="{% url 'term_delete' term.id %}">#}
+                <i class="fas fa-trash-alt"></i> Delete
+            </button>
+
+        </div>
+
+    </div>
+
+    <hr>
+
+{% empty %}
+    <div>You have no terms added - add some by clicking New term above!</div>
+{% endfor %}
