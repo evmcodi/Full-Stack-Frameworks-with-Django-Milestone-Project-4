@@ -37,7 +37,7 @@ def view_definitionssoftware(request):
 
 def save_term_form(request, form, template_name):
     data = dict()
-
+    # Currently logged-in user
     user = request.user
 
     if request.method == 'POST':
@@ -80,3 +80,25 @@ def term_update(request, pk):
     else:
         form = TermForm(instance=term)
     return save_term_form(request, form, 'definitionssoftware/includes/partial_term_update.html')
+
+
+def term_delete(request, pk):
+    term = get_object_or_404(Term, pk=pk)
+    data = dict()
+    # Currently logged-in user
+    user = request.user
+
+    if request.method == 'POST':
+        term.delete()
+        data['form_is_valid'] = True
+
+        # Make sure only the logged-in users terms are returned in the response.
+        terms = Term.objects.filter(user=user)
+
+        data['html_term_list'] = render_to_string('definitionssoftware/includes/partial_term_list.html', {
+            'terms': terms
+        })
+    else:
+        context = {'term': term}
+        data['html_form'] = render_to_string('definitionssoftware/includes/partial_term_delete.html', context, request=request)
+    return JsonResponse(data)

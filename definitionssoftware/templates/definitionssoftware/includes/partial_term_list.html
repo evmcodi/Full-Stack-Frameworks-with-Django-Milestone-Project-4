@@ -18,7 +18,9 @@
                 Edit
             </button>
             <button type="button"
-                    class="btn btn-outline-secondary btn-sm js-delete-term term-btn">
+                    class="btn btn-outline-secondary btn-sm js-delete-term term-btn"
+                    data-url="{% url 'term_delete' term.id %}">
+
                 <i class="fas fa-trash-alt"></i>
                 Delete
             </button>
