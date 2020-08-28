@@ -3,47 +3,43 @@
 {% extends "base.html" %}
 {% load static %}
 
+
 {% block content %}
 
+    {% if perms.blog.publish_blog_posts %}
 
-    {% for blog in blogs %}
+        <div class="defi-toolbar">
+            <a class="defi-btn-primary" href="{% url 'create_blog' %}">New blog post</a>
+        </div>
 
-        <div class="blog-container">
+    {% endif %}
 
-            <div class="defi-term">
-                <details>
-                    <summary>{{ blog.blog_heading }}</summary>
-                    <p>{{ blog.blog }}</p>
-                </details>
-            </div>
+    <div class="blog-section">
+
+        <div class="blogs-container">
 
 
-            <div class="term-defi-btn-container">
-                <button type="button"
-                        class="btn btn-outline-primary btn-sm js-update-term term-btn"
-                        data-url="{% url 'term_update' term.id %}">
-                    <i class="fas fa-edit"></i>
-                    Edit
-                </button>
-                <button type="button"
-                        class="btn btn-outline-secondary btn-sm js-delete-term term-btn"
-                        data-url="{% url 'term_delete' term.id %}">
+            {% for blog in blogs %}
 
-                    <i class="fas fa-trash-alt"></i>
-                    Delete
-                </button>
+                <div class="blog-post">
 
-            </div>
+                    <div>
+                        <h2>{{ blog.blog_heading }}</h2>
+                        <h6>{{ blog.created_on }}</h6>
+                        <p>{{ blog.blog }}</p>
+                    </div>
+
+                </div>
+
+                <hr>
+
+            {% empty %}
+                <div>No blogs currently posted.</div>
+            {% endfor %}
+
 
         </div>
 
-        <hr>
-
-    {% empty %}
-        <div>No blogs currently posted.</div>
-    {% endfor %}
-
-
-
+    </div>
 
 {% endblock %}
