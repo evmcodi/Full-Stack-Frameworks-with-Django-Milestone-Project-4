@@ -1,0 +1,49 @@
+
+
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+
+    {% for blog in blogs %}
+
+        <div class="blog-container">
+
+            <div class="defi-term">
+                <details>
+                    <summary>{{ blog.blog_heading }}</summary>
+                    <p>{{ blog.blog }}</p>
+                </details>
+            </div>
+
+
+            <div class="term-defi-btn-container">
+                <button type="button"
+                        class="btn btn-outline-primary btn-sm js-update-term term-btn"
+                        data-url="{% url 'term_update' term.id %}">
+                    <i class="fas fa-edit"></i>
+                    Edit
+                </button>
+                <button type="button"
+                        class="btn btn-outline-secondary btn-sm js-delete-term term-btn"
+                        data-url="{% url 'term_delete' term.id %}">
+
+                    <i class="fas fa-trash-alt"></i>
+                    Delete
+                </button>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+    {% empty %}
+        <div>No blogs currently posted.</div>
+    {% endfor %}
+
+
+
+
+{% endblock %}

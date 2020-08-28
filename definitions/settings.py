@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'home',
     'definitionssoftware',
     'payment',
+    'blog',
     # Additional apps
     'widget_tweaks',
 
