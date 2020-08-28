@@ -71,3 +71,12 @@ def term_create(request):
     else:
         form = TermForm()
     return save_term_form(request, form, 'definitionssoftware/includes/partial_term_create.html')
+
+
+def term_update(request, pk):
+    term = get_object_or_404(Term, pk=pk)
+    if request.method == 'POST':
+        form = TermForm(request.POST, instance=term)
+    else:
+        form = TermForm(instance=term)
+    return save_term_form(request, form, 'definitionssoftware/includes/partial_term_update.html')

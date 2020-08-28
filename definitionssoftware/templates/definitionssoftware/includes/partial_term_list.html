@@ -12,15 +12,15 @@
 
         <div class="term-defi-btn-container">
             <button type="button"
-                    class="btn btn-outline-primary btn-sm js-update-term term-btn">
+                    class="btn btn-outline-primary btn-sm js-update-term term-btn"
+                    data-url="{% url 'term_update' term.id %}">
                 <i class="fas fa-edit"></i>
                 Edit
-                {#                                data-url="{% url 'term_update' term.id %}">#}
             </button>
             <button type="button"
                     class="btn btn-outline-secondary btn-sm js-delete-term term-btn">
-                {#                                data-url="{% url 'term_delete' term.id %}">#}
-                <i class="fas fa-trash-alt"></i> Delete
+                <i class="fas fa-trash-alt"></i>
+                Delete
             </button>
 
         </div>

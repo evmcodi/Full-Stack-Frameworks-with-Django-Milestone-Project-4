@@ -52,11 +52,11 @@ $(function () {
   $('#modal-term').on("submit", ".js-term-create-form", saveForm);
 
   // Update term
-  $("#term-table").on("click", ".js-update-term", loadForm);
+  $(".defi-software-app").on("click", ".js-update-term", loadForm);
   $("#modal-term").on("submit", ".js-term-update-form", saveForm);
 
   // Delete term
-  $("#term-table").on("click", ".js-delete-term", loadForm);
+  $(".defi-software-app").on("click", ".js-delete-term", loadForm);
   $("#modal-term").on("submit", ".js-term-delete-form", saveForm);
 
 });
