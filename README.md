@@ -79,7 +79,9 @@ Libraries:
 
 ## Testing
 
-### Process
+### Process of testing User Stories
+
+The user stories were tested manually and with unit tests.
 
 
 
