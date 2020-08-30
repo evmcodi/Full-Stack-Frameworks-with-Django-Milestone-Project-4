@@ -13,8 +13,13 @@
 
         <div class="defi-toolbar">
 
-            {#                <h1 class="page-header">My Terms</h1>#}
+            <div class="defi-toolbar-buttons">
             <button class="defi-btn-primary js-create-term" data-url="{% url 'term_create' %}">New term</button>
+            <div>
+                <button class="defi-btn-secondary" onclick="defiExpand()">Expand all</button>
+                <button class="defi-btn-secondary" onclick="defiCollapse()">Collapse all</button>
+            </div>
+            </div>
 
         </div>
 
@@ -26,7 +31,6 @@
 
 
                 {% include 'definitionssoftware/includes/partial_term_list.html' %}
-
 
 
                 <div style="height: 800px"></div>

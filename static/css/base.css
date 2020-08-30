@@ -274,8 +274,14 @@ hr {
     display: flex;
     margin-bottom: 30px;
     padding: 10px;
+    justify-content: center;
 }
 
+.defi-toolbar-buttons {
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
 
 /* Blog app styling */
 
