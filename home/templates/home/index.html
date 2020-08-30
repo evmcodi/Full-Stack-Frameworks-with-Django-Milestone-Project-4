@@ -7,15 +7,77 @@
     {#    <h1 class="display-4 text-success">Extending base template!</h1>#}
 
 
-    <div class="hero-section">
-        <h1 class="hero-heading">Definitions App</h1>
-        <h5 class="hero-subhead">A place to store and view all the terms and definitions you learn.</h5>
-        <a class="hero-button button w-button" href="{% url 'account_signup' %}">Sign Up!</a>
-        <small>Existing users sign in below:</small>
-        <a class="button defi-btn-secondary" href="{% url 'account_login' %}">Login</a>
-    </div>
-    </div>
+    <div class="home-page">
+
+        <div class="hero-section">
+            <h1 class="hero-heading">Definitions App</h1>
+            <h5 class="hero-subhead">A place to store and view all the terms and definitions you learn.</h5>
+            <a class="hero-button button w-button" href="{% url 'account_signup' %}">Sign Up!</a>
+            <small>Existing users sign in below:</small>
+            <a class="button defi-btn-secondary" href="{% url 'account_login' %}">Login</a>
+        </div>
+
+        <div class="hero-image">
+            <img class="hero-image-img" src="{% static "home/hero.png" %}" alt="Image of definitions app">
+        </div>
 
 
+        <div class="product-detail-section">
+
+            <hr class="home-hr">
+
+            <div class="product-detail-pane">
+                <div class="product-description">
+                    <h3>Keep the knowledge you learn</h3>
+                    <p>test</p>
+                </div>
+                <img class="product-image" src="{% static "home/laptop.jpeg" %}" alt="">
+
+            </div>
+
+            <hr class="home-hr">
+
+            <div class="product-detail-pane">
+                <img class="product-image" src="{% static "home/mobile-defi-app.png" %}" alt="">
+                <div class="product-description">
+                    <h3>Easy to use</h3>
+                    <p>test</p>
+                </div>
+            </div>
+
+            <hr class="home-hr">
+
+            <div class="product-detail-pane">
+                <div class="product-description">
+                    <h3>Affordable yearly price</h3>
+                    <p>test</p>
+                </div>
+                <img class="product-image" src="{% static "home/study.jpeg" %}" alt="">
+            </div>
+
+            <hr class="home-hr">
+
+            <div class="product-detail-pane">
+                <img class="product-image" src="{% static "home/fds.jpeg" %}" alt="">
+                <div class="product-description">
+                    <h3>Testimonials</h3>
+                    <p>test</p>
+                </div>
+            </div>
+
+            <hr class="home-hr">
+
+
+        </div>
+
+        <div class="hero-section">
+            <h1>Definitions App</h1>
+            <h5>A place to store and view all the terms and definitions you learn.</h5>
+            <a class="hero-button button w-button" href="{% url 'account_signup' %}">Sign Up!</a>
+            <small>Existing users sign in below:</small>
+            <a class="button defi-btn-secondary" href="{% url 'account_login' %}">Login</a>
+        </div>
+
+    </div>
 
 {% endblock %}
