@@ -11,13 +11,13 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import dj_database_url
 
+
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# Quick-start development settings - unsuitable for production
+# Quick-start development settinglogin/?next=/admin/s - unsuitable for production
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # Only run in Debug mode if there is a DEVELOPMENT flag set in the environment. Otherwise run in Production mode.
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['definitions-web-app.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['definitions-web-app.herokuapp.com', 'localhost', '127.0.0.1']
 
 # Application definition
 

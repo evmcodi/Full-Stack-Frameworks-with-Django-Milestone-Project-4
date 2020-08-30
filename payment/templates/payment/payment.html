@@ -11,18 +11,16 @@
 
 {% block content %}
 
-    {#    <div class="hero-section">#}
-    {#        <h1 class="hero-heading">Definitions App</h1>#}
-    {#        <h5 class="hero-subhead">A place to store and view all the terms and definitions you learn.</h5>#}
-    {#        <a id="hero-button" href="{% url 'account_signup' %}" class="button w-button">Sign Up!</a>#}
-    {#        <small>Existing users sign in below:</small>#}
-    {#        <a class="button defi-btn-secondary" href="{% url 'account_login' %}">Login</a>#}
-    {#    </div>#}
-
 
     <div style="display: flex; max-width: 720px; margin: auto;">
         <div class="hero-section">
-            <h1>Pay here:</h1>
+            <h1>Payment</h1>
+
+            <p>
+                To access the definitions app enter your card details below.
+            </p>
+
+            <p>Your card will be charged €20 and you will have access to the app for one year.</p>
 
 
             <form id="payment-form" action="{% url 'payment' %}" method="POST" style="width: 100%">
@@ -34,7 +32,7 @@
                 <!-- We'll put the error messages in this element -->
                 <div id="card-errors" role="alert"></div>
 
-                <button id="submit-button">Pay</button>
+                <button id="submit-button" class="defi-btn-primary">Pay</button>
             </form>
 
         </div>

@@ -71,20 +71,30 @@
             <ul class="navbar-nav ml-auto">
 
                 {% if request.user.is_authenticated %}
-                    {% if request.user.is_superuser %}
+                    {% if perms.definitionssoftware.access_paid_definitions_app %}
+
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Product Management</a>
+                            <a class="nav-link" href="{% url 'view_blog' %}">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'view_definitionssoftware' %}">Definitions App</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'view_blog' %}">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'payment' %}">Payment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                         </li>
                     {% endif %}
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'payment' %}">Payment</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'view_definitionssoftware' %}">Definitions App</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
-                    </li>
+
+
                 {% else %}
                     <li class="nav-item active">
                         <a class="nav-link" href="{% url 'home' %}">Home
@@ -92,7 +102,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'view_definitionssoftware' %}">Definitions App</a>
+                        <a class="nav-link" href="{% url 'view_blog' %}">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_login' %}">Login</a>
