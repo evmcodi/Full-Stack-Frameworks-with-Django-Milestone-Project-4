@@ -1,6 +1,7 @@
 # Full-Stack-Frameworks-with-Django-Milestone-Project-4
 Website that allows users to store and access terms and definitions that they learn.
 
+![Desktop Demo](/assets/readme-main.png "Desktop Demo")
 
 
 ### User Stories
