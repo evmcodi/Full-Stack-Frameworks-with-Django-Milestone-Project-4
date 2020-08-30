@@ -12,7 +12,7 @@ class Term(models.Model):
     term = models.CharField(max_length=500, null=False, blank=False)
 
     # The definition that the user enters.
-    definition = models.CharField(max_length=4000, null=True, blank=True)
+    definition = models.TextField(max_length=4000, null=True, blank=True)
 
 
     def __str__(self):
