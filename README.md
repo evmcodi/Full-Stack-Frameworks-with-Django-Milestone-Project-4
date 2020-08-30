@@ -1,6 +1,8 @@
 # Full-Stack-Frameworks-with-Django-Milestone-Project-4
 Website that allows users to store and access terms and definitions that they learn.
 
+Live demo is hosted here: https://definitions-web-app.herokuapp.com/.
+
 ![Desktop Demo](/assets/readme-main.png "Desktop Demo")
 
 
